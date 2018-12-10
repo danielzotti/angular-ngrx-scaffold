@@ -1,0 +1,15 @@
+@import "variables";
+
+:host {
+  display: block;
+  position: relative;
+}
+
+.buttons {
+  margin-bottom: $margin-medium;
+  text-align: right;
+
+  button {
+    margin-left: $margin-small;
+  }
+}

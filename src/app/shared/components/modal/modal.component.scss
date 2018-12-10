@@ -1,0 +1,59 @@
+@import "variables";
+
+$modal-max-width:500px !default;
+$modal-min-height:175px !default;
+$modal-bg:rgba(0, 0, 0, 0.2) !default;
+$modal-z-index:1100;
+$modal-close-button-align: right !default;
+
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: $modal-bg;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: $modal-z-index;
+}
+
+// .dz-modal-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   overflow: hidden;
+//   z-index: $modal-z-index;
+//   background-color: $modal-bg;
+// }
+
+.dz-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dz-modal-content {
+  position: relative;
+  margin: 0 auto;
+  max-width: $modal-max-width;
+  min-height: $modal-min-height;
+  padding: $margin-default;
+  background-color: $white;
+  z-index: $modal-z-index;
+}
+
+.dz-close-modal {
+  display: block;
+  text-align: $modal-close-button-align;
+  position: relative;
+  margin-bottom: $margin-default;
+}

@@ -1,0 +1,26 @@
+﻿$dz-bar-height:2px !default;
+$dz-bar-color: rgba(100, 100, 100, 0.5) !default;
+$dz-bar-z-index:1000 !default;
+$dz-bar-transition-duration: 0.5s !default;
+$dz-bar-transition-timing-function: ease-in-out !default;
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $dz-bar-height;
+  width: 100%;
+  pointer-events: none;
+  z-index: $dz-bar-z-index;
+
+  .bar {
+    position: relative;
+    height: $dz-bar-height;
+    background-color: $dz-bar-color;
+    pointer-events: none;
+    width: 0;
+    z-index: $dz-bar-z-index;
+    transition: width $dz-bar-transition-duration $dz-bar-transition-timing-function;
+  }
+}

@@ -1,0 +1,24 @@
+<dz-page [content$]="entity$" [isLoading$]="isEntityFetching$">
+  <div title>
+    {{ (entity$ | async)?.name }}
+  </div>
+  <div noLoadedContent><span dz-translate="pages.entity_detail.messages.no_entity"> L'entità non esiste </span></div>
+  <div loadedContent>
+    <!-- ENTITY DETAIL -->
+    <div class="entity-detail-container">
+      <h6>
+        <span class="clickable" (click)="onOpenEdit()"> <i class="fa fa-edit"></i> </span>
+        <span dz-translate="pages.entity_detail.title">Dettaglio entità</span>
+      </h6>
+      <dz-entity-detail [entity]="entity$ | async" [showEditButtons]="true" (openEdit)="onOpenEdit($event)"
+                        (openEditWp)="onOpenEditWp($event)" (openEditTask)="onOpenEditTask($event)" (openCreateWp)="onOpenCreateWp($event)"
+                        (openCreateTask)="onOpenCreateTask($event)"></dz-entity-detail>
+    </div>
+
+    <!-- ENTITY EDIT -->
+    <dz-modal *ngIf="isEntityEditModalOpen" (closed)="onCloseEdit($event)">
+      <dz-entity-edit [entity]="editModel$ | async" (edited)="onEntityEdited($event)" (deleted)="onEntityDeleted($event)"
+                      (undeleted)="onEntityUndeleted($event)"></dz-entity-edit>
+    </dz-modal>
+  </div>
+</dz-page>

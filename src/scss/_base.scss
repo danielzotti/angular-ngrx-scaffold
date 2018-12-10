@@ -1,0 +1,173 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 300px;
+  margin: 0;
+  padding: 0;
+  background-color: $page-bg;
+  word-break: break-word;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-default;
+}
+
+p {
+  font-size: $font-size-p;
+  margin: 0;
+  margin-bottom: $margin-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: $margin-default;
+}
+
+h1,
+.h1 {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-bold;
+}
+
+h2,
+.h2 {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-bold;
+}
+
+h3,
+.h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-bold;
+}
+
+h4,
+.h4 {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-bold;
+}
+
+h5,
+.h5 {
+  font-size: $font-size-h5;
+  font-weight: $font-weight-bold;
+}
+
+h6,
+.h6 {
+  font-size: $font-size-h6;
+  font-weight: $font-weight-bold;
+}
+
+table {
+  // border-spacing: 1px;
+  border-collapse: collapse;
+  text-align: left;
+  max-width: 100%;
+
+  td,
+  th {
+    box-sizing: border-box;
+  }
+}
+
+a {
+
+  &,
+  &:visited {
+    color: $black;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $gray-dark;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: $font-family;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+textarea {
+  min-height: 50px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: $placeholder-color;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $placeholder-color;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $placeholder-color;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $placeholder-color;
+}
+
+label {
+  font-size: $font-size-extra-small;
+  font-weight: $font-weight-bold;
+  // text-transform: lowercase;
+}
+
+ul {
+  margin-top: $margin-default;
+  margin-bottom: $margin-default;
+  margin-left: $margin-default;
+  padding-left: $margin-small;
+
+  li {
+    margin-bottom: $margin-default;
+  }
+}
+
+/*[tooltip]:hover:after {
+  content: attr(tooltip);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  z-index: 20;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px #222;
+  background-color:$white;
+}*/

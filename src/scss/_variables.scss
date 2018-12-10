@@ -1,0 +1,130 @@
+//COLORS
+$white: #fff;
+$black: #000;
+$black-light:#2b1b0b;
+$gray-dark: #3d4041;
+$gray: #727576;
+$gray-light: #d1d1d1;
+$gray-extralight: #f1f1f1;
+
+$red-dark: #a72937;
+$red:#ea676d;
+$red-pure:#f00;
+
+$green-dark: #496531;
+$green: #779e2e;
+$green-light: #cbef8a;
+
+$magenta-dark: #910931;
+$magenta: #d3464d;
+
+$indaco-dark: #50387f;
+$indaco: #816ca3;
+$indaco-light: #c1c6f0;
+
+$blue-dark: #10586f;
+$blue: #059ebe;
+
+$orange-dark: #8d2509;
+$orange: #c6591f;
+
+$violet-dark: #8e1855;
+$violet:#d24e96;
+
+$yellow: #fcb958;
+$brown: #3f3122;
+
+//COLORS TRANSPARENT
+$darken-amount:10%;
+
+//COLORS COMMON
+$page-bg: $white;
+$placeholder-color: $gray;
+
+//COLORS MESSAGE
+$message-warning-color: #8a6d3b;
+$message-warning-bg-color: #fcf8e3;
+$message-success-color: #3c763d;
+$message-success-bg-color: #d6e9c6;
+$message-danger-color: #a94442;
+$message-danger-bg-color: #f2dede;
+
+//FONTAWESOME
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+$font-family-fontawesome: "FontAwesome";
+//FONT
+$font-family: "Open Sans",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$font-color:$gray-dark;
+$font-weight-extra-bold: 800;
+$font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+$font-size-extra-big: 25px;
+$font-size-big: 18px;
+$font-size-default: 14px;
+$font-size-small: 12px;
+$font-size-extra-small: 10px;
+
+$font-size-p: $font-size-default;
+$font-size-h1: 32px;
+$font-size-h2: 28px;
+$font-size-h3: 23px;
+$font-size-h4: 20px;
+$font-size-h5: 18px;
+$font-size-h6: 16px;
+
+$line-height-default:1.2;
+
+//COMMON
+$margin-default: 15px;
+$margin-small: $margin-default / 3;
+$margin-medium: 2 * $margin-default;
+$margin-big: 3 * $margin-default;
+$margin-extra-big: 5 * $margin-default;
+$border-radius: 7px;
+$box-max-width: 500px;
+$link-color:$gray;
+$link-decoration:underline;
+
+//BOOTSTRAP
+$enable-grid-classes: true;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+$grid-breakpoints: (xs: 0,
+sm: 580px,
+md: 768px,
+lg: 1024px,
+xl:1200px);
+$container-max-widths: (sm: 540px,
+md: 720px,
+lg: 960px,
+xl:1160px);
+
+//LOADER
+$loader-container-min-height: 70px;
+
+// //ICON
+$icon-dimension: 25px;
+$icon-container-dimension: 35px;
+$icon-border-radius: 2px;
+$icon-border-width: 1px;
+
+//BUTTONS
+$btn-icon-dimension: $icon-dimension;
+$btn-border-radius: $icon-border-radius;
+$btn-border-width: $icon-border-width;
+$btn-padding: 5px 10px;
+$btn-padding-big: 10px 20px;
+
+//TEXTAREA
+$textarea-min-height: 50px;
+$input-min-height:20px;
+
+//WELL
+$well-width: 500px;

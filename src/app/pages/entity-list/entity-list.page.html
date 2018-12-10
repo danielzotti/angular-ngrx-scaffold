@@ -1,0 +1,28 @@
+<dz-page [content$]="entities$" [isLoading$]="isLoading$">
+  <div title>
+    <span dz-translate="pages.entity_list.title">Progetti</span>
+  </div>
+  <div noLoadedContent>
+    <span dz-translate="pages.entity_list.messages.no_entities">
+      Non ci sono entità
+    </span>
+  </div>
+  <div loadedContent>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <dz-entity-select-list [entities]="entities$ | async" (entitySelected)="onEntitySelected($event)"></dz-entity-select-list>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="well">
+          <h5>
+            <span dz-translate="pages.entity_list.title_new_entity">Nuovo progetto</span>
+          </h5>
+          <div class="contract">
+            <dz-entity-create [entity]="createModel$ | async" (created)="onEntityCreated($event)">
+            </dz-entity-create>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dz-page>

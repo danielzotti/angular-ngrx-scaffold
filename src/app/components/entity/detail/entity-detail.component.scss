@@ -1,0 +1,11 @@
+@import "variables";
+
+:host {
+  display: block;
+  position: relative;
+}
+
+.project-icon-deleted {
+  font-size: $font-size-big;
+  color: $red;
+}

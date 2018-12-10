@@ -1,0 +1,71 @@
+{
+  "id": "en",
+  "version": "1",
+  "common": {
+    "and": "e",
+    "undo": "annulla",
+    "reset": "reset",
+    "cancel": "annulla",
+    "confirm": "conferma",
+    "add": "aggiungi",
+    "remove": "rimuovi",
+    "restore": "ripristina",
+    "enable": "abilita",
+    "disable": "disabilita",
+    "delete": "elimina",
+    "delete_all": "elimina tutti",
+    "upload": "carica",
+    "edit": "modifica",
+    "from": "da",
+    "to": "a",
+    "continue": "continua",
+    "save": "salva",
+    "change": "cambia",
+    "is_enabled": "abilitato",
+    "is_disabled": "disabilitato",
+    "is_loading": "caricamento...",
+    "is_saving": "salvataggio"
+  },
+  "components": {
+    "entity_create": {
+      "labels": {
+        "name": "nome"
+      }
+    },
+    "entity_edit": {
+      "confirm_delete_message": "sei sicuro di voler eliminare questa entità?",
+      "labels": {
+        "nome": "nome",
+        "is_deleted": "cancellato"
+      }
+    },
+    "entity_select_list": {
+      "filter_by": "Filtra per nome:"
+    }
+  },
+  "pages": {
+    "entity_list": {
+      "title": "lista entità",
+      "title_new_entity": "nuova entità",
+      "messages": {
+        "no_entitys": "non ci sono entità da selezionare"
+      }
+    },
+    "entity_detail": {
+      "title": "dettaglio dell'entità",
+      "messages": {
+        "no_entity": "l'entità non esiste oppure è stata cancellata"
+      }
+    }
+  },
+  "client_response": {
+    "entity_test": "this is a test"
+  },
+  "server_response": {
+    "entity_not_found": "entity doesn't exist"
+  },
+  "messages": {},
+  "menu": {
+    "entities": "entities"
+  }
+}

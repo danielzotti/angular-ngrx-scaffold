@@ -1,0 +1,8 @@
+<div class="dz-modal" (click)="onOverlay($event)">
+  <div class="dz-modal-content" [@slideTop]>
+    <div class="dz-close-modal">
+      <button *ngIf="hasCloseButton" class="btn-icon-action" (click)="close($event)"><i class="fa fa-times"></i></button>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</div>

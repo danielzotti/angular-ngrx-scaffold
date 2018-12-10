@@ -1,0 +1,33 @@
+<div class="page">
+  <div class="container">
+    <!--PAGE TITLE-->
+    <div class="title-container">
+      <h2>
+        <ng-content select="[title]"></ng-content>
+      </h2>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="content-container">
+      <ng-content select="[content]"></ng-content>
+    </div>
+
+    <!-- PAGE LOADER -->
+    <div *ngIf="isLoading$ | async" class="content-loader-container">
+      <dz-inner-loader></dz-inner-loader>
+    </div>
+
+    <!-- PAGE NO LOADED CONTENT-->
+    <div *ngIf="content$ !== undefined && !(isLoading$ | async) && (!(content$ | async)  || (content$ | async)?.length == 0)"
+         class="no-loaded-content-container">
+      <div class="message-container warning" *ngIf="isLoading$ !== undefined">
+        <ng-content select="[noLoadedContent]"></ng-content>
+      </div>
+    </div>
+
+    <!-- PAGE LOADED CONTENT -->
+    <div *ngIf="content$ !== undefined && (content$ | async) && !(isLoading$ | async)" class="loaded-content-container">
+      <ng-content select="[loadedContent]"></ng-content>
+    </div>
+
+  </div>

@@ -1,0 +1,12 @@
+<div #toastContainer id="toast-container" [style.position]="position" class="{{positionClass}}">
+  <div *ngFor="let toast of toasts" [@inOut]="animate" (@inOut.done)="onAnimationEnd($event)" class="toast toast-{{toast.type}}"
+       (click)="clicked(toast)">
+    <div class="toast-close-button" *ngIf="toast.config.showCloseButton" (click)="removeToast(toast)">&times;
+    </div>
+    <div *ngIf="toast.title" class="{{toast.config.titleClass || titleClass}}">{{toast.title}}</div>
+    <div [ngSwitch]="toast.config.enableHTML">
+      <span *ngSwitchCase="true" class="{{toast.config.messageClass || messageClass}}" [innerHTML]="sanitizer.bypassSecurityTrustHtml(toast.message)"></span>
+      <span *ngSwitchDefault class="{{toast.config.messageClass || messageClass}}">{{toast.message}}</span>
+    </div>
+  </div>
+</div>

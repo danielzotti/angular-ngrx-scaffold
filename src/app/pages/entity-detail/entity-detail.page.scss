@@ -1,0 +1,13 @@
+@import "variables";
+
+:host {
+  display: block;
+  position: relative;
+}
+
+.entity-detail-container {
+  background-color: $gray-extralight;
+  padding: $margin-default;
+  border-radius: $border-radius;
+  margin-bottom: $margin-medium;
+}

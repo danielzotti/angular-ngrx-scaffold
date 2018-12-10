@@ -1,0 +1,20 @@
+<form class="entity" #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <!-- ENTITY NAME -->
+  <div class="form-group">
+    <label class="form-element-label"> <span dz-translate="components.entity_create.labels.name">Nome</span> </label>
+    <input class="form-control" autocomplete="off" name="name" required [(ngModel)]="createModel.name" #name="ngModel"
+           [disabled]="createModel?.isLoading" />
+    <p *ngIf="name.dirty && name.errors?.required" class="error-message"><span dz-translate="components.entity_create.errors.name_required">Inserisci
+        un nome</span></p>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <button class="btn-default" type="button" [disabled]="createModel?.isLoading" (click)="reset()">
+      <span dz-translate="common.reset">Reset</span>
+    </button>
+    <button class="btn-action" type="submit" [disabled]="createModel?.isLoading">
+      <span dz-translate="common.save">Salva</span>
+    </button>
+  </div>
+</form>
