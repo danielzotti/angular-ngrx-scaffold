@@ -20,7 +20,7 @@ export interface ICommonEntityState<EntityStore, EntityCreate, EntityEdit>
 export interface ICommonEntityStateAny {
   ids: string[] | number[];
   entities: Dictionary<any>;
-  isFetching: Boolean;
+  isFetching: boolean;
   editModel: any;
   createModel: any;
 }
