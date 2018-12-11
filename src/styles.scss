@@ -1,5 +1,15 @@
 @import "scss/fonts";
 @import "scss/variables";
 
+// NORMALIZE
+@import "../node_modules/normalize.css/normalize.css";
+
+// FONTAWESOME 5
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+
+@import "scss/mixins";
+
 @import "scss/base";
 @import "scss/common";
+
+@import "scss/buttons";

@@ -1,7 +1,11 @@
 <div *ngIf="entities && entities.length > 0">
   <div>
-    <span dz-translate="components.entity_select_list.filter_by">Filtra per nome, nome breve o codice: </span><input
-           #filter type="text" [(ngModel)]="searchText">
+    <div>
+      <label>
+        <span dz-translate="components.entity_select_list.filter_by">Filtra per nome o codice: </span>
+      </label>
+    </div>
+    <input #filter type="text" [(ngModel)]="searchText">
   </div>
   <ul>
     <li class="entity" *ngFor="let entity of entities | searchField:'name':searchText" [ngClass]="{'is-deleted':entity.isDeleted}">

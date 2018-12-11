@@ -1,8 +1,9 @@
 export const environment = {
   production: true,
+  useFakeApi: false,
   envName: 'test',
   appName: '[TEST] angular-ngrx-scaffold',
-  apiDomain: "test-api.example.com",
+  apiDomain: 'test-api.example.com',
   apiBaseUrl: '/api',
   baseHref: '',
   loginUrl: '/login',

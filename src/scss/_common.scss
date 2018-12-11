@@ -1,6 +1,141 @@
 @import "variables";
 
 .page {
-  max-width: 800px;
+  max-width: 500px;
   margin: 0 auto;
+  padding: $margin-default;
+}
+
+.well {
+  background-color: $gray-extralight;
+  padding: $margin-default;
+  border-radius: $border-radius;
+  margin-top: $margin-default;
+  margin-bottom: $margin-default;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'variables';
+@import 'mixins';
+
+//TODO: DA SCOMMENTARE QUANDO SI CONTROLLANO LE TRADUZIONI
+// .ps-translate {
+//   background-color: yellow !important;
+//   color: black !important;
+// }
+
+.text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.well {
+  padding: $margin-default;
+  margin: $margin-default auto;
+  max-width: $well-width;
+  border: 0;
+  border-radius: $border-radius;
+  background-color: transparentize($color: #000000, $amount: 0.95)
+}
+
+.help-block {
+  font-style: italic;
+  font-size: $font-size-small;
+  color: $gray-dark;
+  line-height: 1.2;
+}
+
+.help-block-big {
+  @extend .help-block;
+  font-size: $font-size-big;
+}
+
+.form-group {
+  margin-bottom: $margin-default;
+}
+
+.form-control {
+  max-width: 100%;
+  min-width: 100%;
+  border: 1px solid $gray-light;
+  border-radius: $border-radius;
+  padding: 5px 10px;
+  font-family: $font-family;
+  min-height: $input-min-height;
+
+  &textarea {
+    min-height: $textarea-min-height;
+  }
+
+  &:focus {
+    box-shadow: 0 0 1px 1px $gray-light;
+    outline: none;
+  }
+}
+
+.message-container {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  &.warning {
+    color: $message-warning-color;
+    background-color: $message-warning-bg-color;
+    border-color: $message-warning-bg-color;
+  }
+
+  &.success {
+    color: $message-success-color;
+    background-color: $message-success-bg-color;
+    border-color: $message-success-bg-color;
+  }
+
+  &.danger {
+    color: $message-danger-color;
+    background-color: $message-danger-bg-color;
+    border-color: $message-danger-bg-color;
+  }
+}
+
+.error-message {
+  color: $red-pure;
+  font-size: $font-size-small;
+}
+
+.content-loader-container {
+  position: relative;
+  display: block;
+  min-height: 80px;
 }

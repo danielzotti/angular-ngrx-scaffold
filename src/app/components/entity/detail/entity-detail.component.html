@@ -1,13 +1,13 @@
 <div *ngIf="entity">
   <p class="entity-icon-deleted" *ngIf="entity.isDeleted">
     <i class="fa fa-trash"></i>
-    <span ps-translate="">Cancellato</span>
+    <span dz-translate="components.entity_detail.labels.is_deleted">Cancellato</span>
   </p>
   <!-- NAME -->
   <div class="entity-name">
     <label>
-      <span ps-translate="components.entity_detail.labels.short_title">Nome breve</span>
+      <span dz-translate="components.entity_detail.labels.name">Nome</span>
     </label>
-    <p>{{entity.shortTitle}}</p>
+    <p>{{entity.name}}</p>
   </div>
 </div>

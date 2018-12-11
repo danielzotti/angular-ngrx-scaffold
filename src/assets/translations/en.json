@@ -39,8 +39,13 @@
         "is_deleted": "cancellato"
       }
     },
+    "entity_detail": {
+      "labels": {
+        "name": "nome"
+      }
+    },
     "entity_select_list": {
-      "filter_by": "Filtra per nome:"
+      "filter_by": "filtra per nome:"
     }
   },
   "pages": {

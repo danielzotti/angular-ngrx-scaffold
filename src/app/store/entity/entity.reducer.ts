@@ -50,13 +50,10 @@ export function entityReducer(
     case EntityActionTypes.DeleteSuccessLogical:
     case EntityActionTypes.UndeleteSuccess:
       const editedModel = { ...action.payload.entity };
-      return adapter.upsertOne(
-        editedModel,
-        {
-          ...state,
-          editModel: { ...editedModel, isLoading: false, isDone: true }
-        }
-      );
+      return adapter.upsertOne(editedModel, {
+        ...state,
+        editModel: { ...editedModel, isLoading: false, isDone: true }
+      });
     // UPDATE ERROR
     case EntityActionTypes.UpdateError:
     case EntityActionTypes.DeleteError:
@@ -67,7 +64,7 @@ export function entityReducer(
       };
     // DELETE
     case EntityActionTypes.Delete:
-      const deleteModel = {...action.payload.entity };
+      const deleteModel = { ...action.payload.entity };
       return {
         ...state,
         editModel: { ...deleteModel, isLoading: true }
@@ -100,7 +97,8 @@ export function entityReducer(
       return adapter.upsertOne(loadedModel, {
         ...state,
         isFetching: false,
-        editModel: { ...loadedModel, isLoading: false }
+        editModel: undefined,
+        createModel: undefined
       });
     // LOAD CANCEL
     case EntityActionTypes.LoadCancel:
@@ -115,7 +113,8 @@ export function entityReducer(
       return {
         ...state,
         isFetching: false,
-        editModel: { ...editModel, isLoading: false }
+        editModel: undefined,
+        createModel: undefined
       };
 
     // LIST LOAD

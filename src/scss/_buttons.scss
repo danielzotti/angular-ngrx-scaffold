@@ -1,0 +1,203 @@
+@import "variables";
+@import "mixins";
+
+//BUTTONS
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border-width: $btn-border-width;
+  border-color: transparent;
+  border-radius: $btn-border-radius;
+  border-style: solid;
+  padding: $btn-padding;
+  text-decoration: none;
+  /*margin-left: $margin-small;
+  margin-right: $margin-small;*/
+  color: inherit;
+
+  &:active,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:focus:active {
+    outline: none;
+    text-decoration: none !important;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.btn-block {
+  @extend .btn;
+  display: block;
+  padding: $btn-padding-big;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn-icon {
+  @extend .btn;
+  @include icon($btn-icon-dimension, $btn-border-width, $btn-border-radius, 0.77);
+  @include btn-icon($black, $page-bg);
+}
+
+.btn-icon-inverse {
+  @extend .btn;
+  @include icon($btn-icon-dimension, $btn-border-width, $btn-border-radius, 0.77);
+  @include btn-icon($white, $page-bg, 0.5, 0.2);
+}
+
+.btn-default {
+  @extend .btn;
+  border-color: $gray-dark;
+}
+
+.btn-block-default {
+  @extend .btn-block;
+  @extend .btn-default;
+}
+
+.btn-alternate {
+  @extend .btn;
+
+  &,
+  &:focus,
+  &:active,
+  &:visited {
+    background-color: $white;
+    color: $red-dark;
+    border: $btn-border-width solid $red-dark;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $red-dark;
+    border: $btn-border-width solid $red;
+  }
+
+  &:focus:active {
+    background-color: $red-dark;
+    color: $white;
+    outline: none;
+    border: $btn-border-width solid $red-dark;
+  }
+
+  &[disabled] {
+    background-color: $gray-extralight;
+    border-color: $gray-light;
+    color: $gray-light;
+  }
+}
+
+.btn-block-alternate {
+  @extend .btn-block;
+  @extend .btn-alternate;
+}
+
+.btn-transparent {
+  @extend .btn;
+  color: $gray-dark;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:focus:active {
+    color: $black;
+  }
+
+  &[disabled] {
+    color: $gray-light;
+  }
+}
+
+.btn-icon-transparent {
+  @extend .btn-transparent;
+  @include icon($btn-icon-dimension, $btn-border-width, $btn-border-radius, 0.77);
+}
+
+.btn-action {
+  @extend .btn;
+
+  &,
+  &:focus,
+  &:active,
+  &:visited {
+    background-color: $blue;
+    border: $btn-border-width solid $blue-dark;
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+    border: $btn-border-width solid $blue;
+  }
+
+  &:focus:active {
+    color: $blue-dark;
+    background-color: $white;
+    outline: none;
+    border: $btn-border-width solid $blue-dark;
+  }
+
+  &[disabled] {
+    background-color: $gray-extralight;
+    border-color: $gray-light;
+    color: $gray-light;
+  }
+}
+
+.btn-action-alternate {
+  @extend .btn;
+
+  &,
+  &:focus,
+  &:active,
+  &:visited {
+    background-color: $red-dark;
+    border: $btn-border-width solid $red-dark;
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $red-dark;
+    color: $white;
+    border: $btn-border-width solid $red;
+  }
+
+  &:focus:active {
+    color: $red-dark;
+    background-color: $white;
+    outline: none;
+    border: $btn-border-width solid $red-dark;
+  }
+
+  &[disabled] {
+    background-color: $gray-extralight;
+    border-color: $gray-light;
+    color: $gray-light;
+  }
+}
+
+.btn-icon-action {
+  @extend .btn-action;
+  @include icon($btn-icon-dimension, $btn-border-width, $btn-border-radius, 0.77);
+}
+
+
+.btn-block-action {
+  @extend .btn-block;
+  @extend .btn-action;
+}
+
+.btn-icon-alternate {
+  @extend .btn-alternate;
+  @include icon($btn-icon-dimension, $btn-border-width, $btn-border-radius, 0.77);
+}

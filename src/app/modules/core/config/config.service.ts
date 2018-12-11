@@ -23,6 +23,7 @@ export class ConfigService {
     }
   }
 
+  public static USE_FAKE_API: boolean = environment.useFakeApi;
   public static API_DOMAIN: string = environment.apiDomain;
   public static API_DOMAIN_URL: string =
     window.location.protocol + '//' + ConfigService.API_DOMAIN;

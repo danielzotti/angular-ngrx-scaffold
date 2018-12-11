@@ -1,5 +1,6 @@
 <dz-page [content$]="entity$" [isLoading$]="isEntityFetching$">
   <div title>
+    <a class="clickable" routerLink="/entities"><i class="fa fa-arrow-left"></i></a>
     {{ (entity$ | async)?.name }}
   </div>
   <div noLoadedContent><span dz-translate="pages.entity_detail.messages.no_entity"> L'entità non esiste </span></div>
@@ -10,9 +11,7 @@
         <span class="clickable" (click)="onOpenEdit()"> <i class="fa fa-edit"></i> </span>
         <span dz-translate="pages.entity_detail.title">Dettaglio entità</span>
       </h6>
-      <dz-entity-detail [entity]="entity$ | async" [showEditButtons]="true" (openEdit)="onOpenEdit($event)"
-                        (openEditWp)="onOpenEditWp($event)" (openEditTask)="onOpenEditTask($event)" (openCreateWp)="onOpenCreateWp($event)"
-                        (openCreateTask)="onOpenCreateTask($event)"></dz-entity-detail>
+      <dz-entity-detail [entity]="entity$ | async" [showEditButtons]="true" (openEdit)="onOpenEdit($event)"></dz-entity-detail>
     </div>
 
     <!-- ENTITY EDIT -->

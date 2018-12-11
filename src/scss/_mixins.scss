@@ -1,0 +1,126 @@
+@import "variables";
+
+@mixin reset-link-behaviour($color: $black) {
+  &,&:hover,&:active,&:focus,&:visited {
+    color:$color;
+    text-decoration:none;
+  }
+}
+
+@mixin square-number($color: $black, $bg-color: $white, $dimension: 100px) {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  color: $color;
+  min-width: $dimension;
+  min-height: $dimension;
+  margin: $margin-small;
+
+  .number {
+    font-size: $dimension / 2;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    line-height: $dimension;
+    vertical-align: middle;
+  }
+
+  .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $margin-small;
+    font-size: $dimension / 8;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+@mixin heading($font-size: $font-size-small,$line-color: $gray-light, $bg-color: $white, $color: $red-dark) {
+  display: block;
+  background-color: $line-color;
+  line-height: 1;
+  font-size: $font-size;
+
+  > span {
+    display: inline-block;
+    line-height: 1;
+    color: $color;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    background-color: $bg-color;
+    padding-right: 15px;
+  }
+}
+
+@mixin icon($icon-dimension: 26px, $icon-border-width: 1px, $icon-border-radius: 2px, $icon-inner-ratio: 0.92) {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: $icon-dimension;
+  height: $icon-dimension;
+  line-height: 1;
+  padding: 0;
+  border-width: $icon-border-width;
+  border-style: solid;
+  border-radius: $icon-border-radius;
+
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: $icon-dimension - ($icon-border-width * 2);
+    height: $icon-dimension - ($icon-border-width * 2);
+    text-align: center;
+    line-height: $icon-dimension;
+
+    &:before {
+      width: $icon-dimension - ($icon-border-width * 2);
+      height: $icon-dimension - ($icon-border-width * 2);
+      display: inline-block;
+      font-size: $icon-dimension * $icon-inner-ratio;
+      line-height: $icon-dimension - ($icon-border-width * 2);
+      vertical-align: top;
+    }
+  }
+}
+
+@mixin btn-icon($color, $bg, $transparent-init: 0.9, $transparent-step: 0.2) {
+
+  &, &:focus, &:active, &:visited {
+    color: $bg;
+    border-color: transparent;
+    background-color: transparentize($color,$transparent-init);
+
+    i {
+      color: $bg
+    }
+  }
+
+  &:hover {
+    color: $bg;
+    background-color: transparentize($color,($transparent-init - $transparent-step));
+    border-color: transparent;
+    i {
+      color: transparentize($color,($transparent-init - $transparent-step));
+      color: $bg;
+    }
+  }
+
+  &:active:hover {
+    color: $bg;
+    background-color: transparentize($color,($transparent-init - 2 * $transparent-step)) !important;
+    border-color: transparent;
+    i {
+      color: $bg;
+    }
+  }
+}
+
+@function get-filter-indentation($level, $width: $margin-small) {
+  @return ($level * $width) + $width;
+}

@@ -29,12 +29,12 @@ export class EntityCreateComponent implements OnInit, OnChanges {
 
   createModel: IEntityCreate;
 
-  constructor(
-    private formService: FormService,
-  ) {}
+  constructor(private formService: FormService) {}
 
   ngOnInit() {
-    this.createModel = this.entity;
+    this.createModel = this.entity
+      ? this.entity
+      : { id: null, name: null, isDeleted: false };
   }
 
   ngOnChanges(changes: SimpleChanges): void {

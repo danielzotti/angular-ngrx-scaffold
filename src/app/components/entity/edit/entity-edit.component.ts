@@ -42,7 +42,7 @@ export class EntityEditComponent implements OnInit, OnChanges {
   ) {}
 
   ngOnInit() {
-    this.editingModel = this.entity;
+    this.editingModel = { ...this.entity };
   }
 
   ngOnChanges(changes: SimpleChanges): void {

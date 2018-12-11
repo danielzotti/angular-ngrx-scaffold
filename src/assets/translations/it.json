@@ -1,5 +1,5 @@
 {
-  "id": "en",
+  "id": "it",
   "version": "1",
   "common": {
     "and": "e",
@@ -35,12 +35,18 @@
     "entity_edit": {
       "confirm_delete_message": "sei sicuro di voler eliminare questa entità?",
       "labels": {
-        "nome": "nome",
+        "name": "nome",
+        "is_deleted": "cancellato"
+      }
+    },
+    "entity_detail": {
+      "labels": {
+        "name": "nome",
         "is_deleted": "cancellato"
       }
     },
     "entity_select_list": {
-      "filter_by": "Filtra per nome:"
+      "filter_by": "filtra per nome:"
     }
   },
   "pages": {

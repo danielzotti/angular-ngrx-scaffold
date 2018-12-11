@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "name": "mario",
+    "isDeleted": false
+  },
+  {
+    "id": 2,
+    "name": "luigi",
+    "isDeleted": true
+  },
+  {
+    "id": 3,
+    "name": "marco",
+    "isDeleted": false
+  }
+]
