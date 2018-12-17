@@ -53,11 +53,11 @@ I file sono questi:
 
 - store (NgRx)
   - actions [`entity.actions.ts`](/src/app/store/entity/entity.actions.ts)
-  - adapter [`entity.adapter.ts`](/src/app/store/entity/entity.actions.ts)
-  - effects [`entity.effects.ts`](/src/app/store/entity/entity.actions.ts)
-  - reducer [`entity.reducer.ts`](/src/app/store/entity/entity.actions.ts)
-  - selector [`entity.selector.ts`](/src/app/store/entity/entity.actions.ts)
-  - state [`entity.state.ts`](/src/app/store/entity/entity.actions.ts)
+  - adapter [`entity.adapter.ts`](/src/app/store/entity/entity.adapter.ts)
+  - effects [`entity.effects.ts`](/src/app/store/entity/entity.effects.ts)
+  - reducer [`entity.reducer.ts`](/src/app/store/entity/entity.reducer.ts)
+  - selector [`entity.selectors.ts`](/src/app/store/entity/entity.selectors.ts)
+  - state [`entity.state.ts`](/src/app/store/entity/entity.state.ts)
 - altri
   - service [`entity.service.ts`](/src/app/services/entity.service.ts)
   - facade [`entity.facade.ts`](/src/app/facades/entity.facade.ts)
